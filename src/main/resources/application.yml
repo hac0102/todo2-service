@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/todo
+    #    url: log4:jdbc:mysql://127.0.0.1:3306/todo
+    username: hac
+    password: root
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    hikari:
+      connection-timeout: 5000
+      validation-timeout: 1000
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-test-query: SELECT 1
