@@ -1,13 +1,12 @@
+server:
+  error:
+    include-exception: true     # 오류 응답에 exception의 내용을 포함할지 여부
+    include-stacktrace: always  # 오류 응답에 stacktrace 내용을 포함할 지 여부
+
+---
 spring:
-  datasource:
-    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/todo
-    #    url: log4:jdbc:mysql://127.0.0.1:3306/todo
-    username: hac
-    password: root
-    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    hikari:
-      connection-timeout: 5000
-      validation-timeout: 1000
-      maximum-pool-size: 10
-      minimum-idle: 2
-      connection-test-query: SELECT 1
+  profiles:
+    active: local
+    include: oauth2
+  jpa:
+    show_sql: true
