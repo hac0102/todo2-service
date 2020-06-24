@@ -1,9 +1,11 @@
 package com.hac.todo.config.auth.dto;
 
 import com.hac.todo.domain.user.User;
+import lombok.Getter;
 
 import java.io.Serializable;
 
+@Getter
 public class SessionUser implements Serializable {
     private long id;
     private String name;
