@@ -5,6 +5,8 @@ server:
 
 ---
 spring:
+  session:
+    stroe-type: jdbc
   profiles:
     active: local
     include: oauth2
