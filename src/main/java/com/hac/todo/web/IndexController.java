@@ -25,7 +25,9 @@ public class IndexController {
             return mv;
         }
 
+        mv.addObject("userInfo", user);
         mv.setViewName("main");
+
         return mv;
     }
 
